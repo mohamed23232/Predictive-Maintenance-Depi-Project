@@ -57,7 +57,7 @@ We deployed the model using a Flask web application. Users can input machine par
     python app.py
     ```
 
-3. Access the web interface at `http://localhost:5000`.
+3. Access the web interface at the local link provided to you by the application.
 
 ## Contributors
 
