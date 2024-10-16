@@ -24,6 +24,10 @@ The **AI4I 2020 Predictive Maintenance Dataset** is synthetic and contains featu
 
 Failures are categorized into five modes: **Tool Wear Failure (TWF), Heat Dissipation Failure (HDF), Power Failure (PWF), Overstrain Failure (OSF),** and **Random Failure (RNF)**.
 
+**Dataset link**
+https://www.kaggle.com/datasets/stephanmatzka/predictive-maintenance-dataset-ai4i-2020/code
+
+
 ## Key Features
 
 - **Handling Class Imbalance**: We addressed class imbalance by up-sampling the minority class (machine failures) to improve model performance.
