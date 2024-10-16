@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Model Deployment</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='CSS/style.css') }}">
+</head>
+<body>
+
+    <div class="main">
+        <h1>Machine Failure Predictor</h1>
+            
+        <!-- Form for user to input data -->
+        <form action="/predict" method="post">
+            <div class="inputs">
+                <input type="text" class="num" id="air_temperature" name="air_temperature" placeholder="Air temperature">
+                <input type="text" class="num" id="rotational_speed" name="rotational_speed" placeholder="Rotational speed">
+                <input type="text" class="num" id="torque" name="torque" placeholder="Torque">
+                <input type="text" class="num" id="tool_wear" name="tool_wear" placeholder="Tool wear">
+                <input type="text" class="num" id="process_temperature" name="process_temperature" placeholder="Process temperature">
+                <input type="text" class="num" id="type" name="type" placeholder="Type (0:L | 1:M | 2:H)">
+            </div>
+            <div class="submit">
+                <input type="submit" class="submit" value="Submit">
+            </div>
+        </form>
+        <div class="prediction">
+            {% if prediction %}
+                <h2>{{ prediction }}</h2>
+            {% endif %}
+        </div>
+    </div>
+
+    
+
+<script>
+    let inputs = document.getElementsByClassName("num");
+
+    // Loop through each input element with the class 'num'
+    for (let i = 0; i < inputs.length; i++) {
+        // Add keypress event listener for all input fields
+        inputs[i].addEventListener('keypress', function(event) {
+            const char = String.fromCharCode(event.which);
+            const inputField = event.target.value;
+
+            // Check if it's the last input field (the last element in the collection)
+            if (i === inputs.length - 1) {
+                // For the last input field, allow only '0', '1', or '2' and restrict to 1 digit
+                const validChar = /[012]/.test(char) && inputField.length === 0;
+                if (!validChar) {
+                    event.preventDefault(); // Prevent invalid input
+                }
+            } else {
+                // For other input fields, allow floating-point numbers as previously defined
+                const validFloatChar = /[0-9]/.test(char) || 
+                                    (char === '.' && !inputField.includes('.')) || 
+                                    (char === '-' && inputField.length === 0) || 
+                                    (char === '+' && inputField.length === 0);
+                if (!validFloatChar) {
+                    event.preventDefault(); // Prevent invalid input
+                }
+            }
+        });
+    }
+
+</script>
+</body>
+</html>
