@@ -1,6 +1,6 @@
 # Predictive Maintenance System
 
-This project aims to develop an AI-powered **Predictive Maintenance System** to anticipate machine failures. By leveraging machine learning techniques, the system predicts failures in real-time, enabling proactive maintenance and reducing downtime. The system focuses on analyzing parameters such as temperature, rotational speed, and torque to detect potential failures.
+This project focuses on applying machine learning to a predictive maintenance use case. In industrial settings, sensors are deployed to monitor equipment, network devices, and other field assets. These sensors help predict when components need to be replaced or repaired before failure occurs, avoiding costly downtime and poor customer experiences. Predictive maintenance models can also augment regular schedule-based maintenance by preventing unnecessary replacements of parts that are still in good condition, reducing operational costs.
 
 ## Project Structure
 
@@ -27,6 +27,9 @@ Failures are categorized into five modes: **Tool Wear Failure (TWF), Heat Dissip
 **Dataset link**
 https://www.kaggle.com/datasets/stephanmatzka/predictive-maintenance-dataset-ai4i-2020/code
 
+### Objective
+
+The primary goal of this project is to develop a machine learning model that can correctly predict machine failures, so maintenance teams can take preventive action before a failure causes downtime.
 
 ## Key Features
 
