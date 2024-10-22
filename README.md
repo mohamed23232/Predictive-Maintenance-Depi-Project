@@ -4,11 +4,12 @@ This project focuses on applying machine learning to a predictive maintenance us
 
 ## Project Structure
 
-- `data/`: Contains the dataset used for the project, sourced from the UCI AI4I 2020 Predictive Maintenance Dataset.
-- `notebooks/`: Includes Jupyter notebooks for data exploration, feature selection, and model evaluation.
-- `src/`: The main source code for data preprocessing, model training, and evaluation.
-- `app/`: Flask web application for deploying the machine learning model.
-- `models/`: Saved machine learning models, including the Voting Classifier used for prediction.
+- `DataSet/`: Contains the dataset used for the project, sourced from the UCI AI4I 2020 Predictive Maintenance Dataset.
+- `ProcessedData/`: Saved machine learning models, including the Voting Classifier used for prediction.
+- `Notebooks/`: Includes Jupyter notebooks for data exploration, feature selection, and model evaluation.
+- `ModelDeployment/`: Flask web application for deploying the machine learning model.
+- `Models/`: Saved machine learning models, including the Voting Classifier used for prediction.
+- `Reports/`: Saved machine learning models, including the Voting Classifier used for prediction.
 - `README.md`: Documentation of the project.
 
 ## Dataset
