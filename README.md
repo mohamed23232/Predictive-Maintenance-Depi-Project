@@ -65,4 +65,3 @@ We deployed the model using a Flask web application. Users can input machine par
 - Mohamed Ahmed Rabea
 - Muhammad Usama Aowad
 - Useif Muhammed Saad Ebrahim
-- Ahmed Abdelsalam Abdelmaqsoud
